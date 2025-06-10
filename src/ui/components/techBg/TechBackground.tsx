@@ -68,7 +68,8 @@ const TechBackground = () => {
         ctx.beginPath();
         ctx.moveTo(0, y);
         ctx.lineTo(canvas.width, y);
-        ctx.strokeStyle = lineColor;
+        
+        ctx.strokeStyle = lineColor; 
         ctx.stroke();
       }
     };
