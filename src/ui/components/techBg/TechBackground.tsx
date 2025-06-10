@@ -67,8 +67,9 @@ const TechBackground = () => {
       for (let y = 0; y < canvas.height; y += gridSize) {
         ctx.beginPath();
         ctx.moveTo(0, y);
-        ctx.lineTo(canvas.width, y);
         
+        ctx.lineTo(canvas.width, y);
+
         ctx.strokeStyle = lineColor; 
         ctx.stroke();
       }
