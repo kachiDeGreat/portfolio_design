@@ -29,7 +29,7 @@ const Intro: React.FC = () => {
           software and overlays evert. I help teams and organizations deliver
           smooth, high-quality livestreams that feel professional and polished.
           Whether it’s designing for the{" "}
-          <span style={{ fontWeight: "bold" }}>web</span>, experimenting with{" "}
+          <span style={{ fontWeight: "bold" }}>web</span>, experimenting with
           <span style={{ fontWeight: "bold" }}>AI</span>, or running a full{" "}
           <span style={{ fontWeight: "bold" }}>live broadcast</span>, I thrive
           at the intersection of{" "}
