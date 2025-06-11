@@ -1,12 +1,68 @@
-/* Reset & Base Styles */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
 body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  color: #e2e8f0; /* Light text color for contrast */
+  font-family: "Open Sans", sans-serif !important;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/* App.css */
 .app-container {
   position: relative;
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fixed navbar spacing */
+.main-content-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+/* Content container */
+.main-content {
+  width: 100%;
+  max-width: 920px;
+  padding: 2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .main-content-wrapper {
+    padding-top: 60px; /* Adjusted for mobile navbar */
+  }
+  
+  .main-content {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding: 1rem;
+  }
+}
+
+/* Dark Theme */
+.theme-dark {
+  --bg-color: #020a13;
+  --text-color: #e2e8f0;
+  --accent-color: #4fd1c5;
+}
+
+/* Light Theme */
+.theme-light {
+  --bg-color: #f8fafc;
+  --text-color: #020617;
+  --accent-color: #3b82f6;
 }
