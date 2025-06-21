@@ -1,0 +1,154 @@
+.about-content {
+  text-align: left;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+.welcome-bg-text {
+  position: fixed;
+  top: 80%;
+  left: -4%;
+  transform: translateY(-50%);
+  font-size: 12vw;
+  font-weight: 900;
+  line-height: 1;
+  white-space: nowrap;
+  z-index: -1;
+  font-family: "Merriweather", serif !important;
+  opacity: 0.03;
+  user-select: none;
+  pointer-events: none;
+  transition: opacity 0.5s ease;
+}
+
+/* Theme colors */
+.about-content.light .welcome-bg-text {
+  color: #1a202c;
+}
+
+.about-content.dark .welcome-bg-text {
+  color: #c6c6c6;
+}
+
+.about-heading {
+  font-size: 3.075em;
+  font-weight: 900;
+  margin: 1.5rem 0rem 1.5rem;
+  position: relative;
+}
+
+.about-content.light .about-heading {
+  color: #1a202c;
+}
+.about-content.dark .about-heading {
+  color: #c6c6c6;
+}
+
+.about-div {
+  padding-left: 25px;
+}
+
+.about-div-header {
+  font-size: 1.2em;
+  font-weight: 600;
+  /* margin-top: 1.5rem; */
+  margin-bottom: 0.5rem;
+}
+.about-content.light .about-div-header {
+  color: #1a202c;
+}
+.about-content.dark .about-div-header {
+  color: #c6c6c6;
+}
+.about-div-body {
+  font-size: 0.775rem;
+  line-height: 2;
+  font-weight: 400;
+  /* font-family: "Open Sans", sans-serif !important; */
+  margin-top: 0.4rem;
+}
+.about-content.light .about-div-body {
+  color: #1a202c;
+}
+.about-content.dark .about-div-body {
+  color: #c6c6c6;
+}
+
+.about-content.light .about-div {
+  border-left: 1.5px solid #1a202c;
+}
+
+.about-content.dark .about-div {
+  border-left: 1.5px solid #c6c6c6;
+}
+
+/* Link Container */
+.link-container {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+/* Link Styles */
+.link_dev {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.about-content.light .link_dev {
+  color: #4a5568;
+}
+
+.about-content.dark .link_dev {
+  color: #e2e8f0;
+}
+
+.link_dev:hover {
+  opacity: 0.8;
+}
+
+/* Arrow animation */
+.arrow {
+  display: inline-block;
+  animation: arrowBounce 1.5s infinite;
+}
+
+@keyframes arrowBounce {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-5px);
+  }
+}
+
+/* Link Underline Effect */
+.link_dev::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease;
+}
+
+.about-content.light .link_dev::after {
+  background-color: #4a5568;
+}
+
+.about-content.dark .link_dev::after {
+  background-color: #e2e8f0;
+}
+
+.link_dev:hover::after {
+  width: 100%;
+}

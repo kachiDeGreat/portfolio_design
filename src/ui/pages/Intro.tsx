@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Intro.css";
 import { useTheme } from "../components/theme/ThemeContext";
 import SocialLinks from "../components/socialLinks/SocialLinks";
@@ -7,7 +8,12 @@ const Intro: React.FC = () => {
   const { theme } = useTheme();
   return (
     <section className={`intro-section ${theme}`}>
-      <h1 className="intro-heading">Hi, I'm KachiDeGreat</h1>
+      <div className="welcome-bg-text" aria-hidden="true">
+        Kachi.dev
+      </div>
+      <h1 className="intro-heading" data-text="Hi, I'm KachiDeGreat">
+        Hi, I'm KachiDeGreat
+      </h1>
       <div className="intro-content">
         <p>
           I’m a <span style={{ fontWeight: "bold" }}>frontend developer</span>,
@@ -38,9 +44,9 @@ const Intro: React.FC = () => {
       </div>
       <div className="link-container">
         <div>
-          <a href="#about" className="link_dev">
+          <Link to="/about" className="link_dev">
             About me <span className="arrow">→</span>
-          </a>
+          </Link>
         </div>
         <div>
           <SocialLinks />

@@ -1,51 +1,54 @@
-import React from "react";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./MouseMove.css";
 
 const MouseMove: React.FC = () => {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
-  const [trailingPosition, setTrailingPosition] = useState({ x: 0, y: 0 });
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
+  const [trailPosition, setTrailPosition] = useState({ x: 0, y: 0 });
+  const animationRef = useRef<number | null>(null);
 
-  // Mouse movement tracker
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      setCursorPosition({ x: e.clientX, y: e.clientY });
     };
 
-    // Smooth trailing effect
-    const interval = setInterval(() => {
-      setTrailingPosition((prev) => ({
-        x: prev.x + (position.x - prev.x) * 0.1,
-        y: prev.y + (position.y - prev.y) * 0.1,
+    const animate = () => {
+      // Calculate new trail position with smooth following
+      setTrailPosition((prev) => ({
+        x: prev.x + (cursorPosition.x - prev.x) * 0.1, // Adjust this value for trail speed
+        y: prev.y + (cursorPosition.y - prev.y) * 0.1,
       }));
-    }, 16);
+      animationRef.current = requestAnimationFrame(animate);
+    };
 
     window.addEventListener("mousemove", handleMouseMove);
+    animationRef.current = requestAnimationFrame(animate);
 
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);
-      clearInterval(interval);
+      if (animationRef.current) {
+        cancelAnimationFrame(animationRef.current);
+      }
     };
-  }, [position]);
-  return (
-    <div>
-      <div
-        className="mouse-cursor"
-        style={{
-          left: `${position.x}px`,
-          top: `${position.y}px`,
-        }}
-      />
+  }, [cursorPosition]);
 
-      {/* Optional trailing circle (remove if not needed) */}
+  return (
+    <>
       <div
         className="mouse-trail"
         style={{
-          left: `${trailingPosition.x}px`,
-          top: `${trailingPosition.y}px`,
+          transform: `translate(${trailPosition.x - 37.5}px, ${
+            trailPosition.y - 37.5
+          }px)`,
         }}
       />
-    </div>
+
+      <div
+        className="mouse-cursor"
+        style={{
+          transform: `translate(${cursorPosition.x}px, ${cursorPosition.y}px)`,
+        }}
+      />
+    </>
   );
 };
 

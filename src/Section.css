@@ -1,0 +1,23 @@
+.section-container {
+  padding: 2rem;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.section-container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+/* Theme styles */
+.section-container.light {
+  background-color: #ffffff;
+  color: #1a202c;
+}
+
+.section-container.dark {
+  background-color: #0a0e17;
+  color: #f7fafc;
+}

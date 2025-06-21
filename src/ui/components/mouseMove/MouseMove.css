@@ -1,4 +1,4 @@
-/* Main Cursor */
+/* Main Cursor (small dot) - exact mouse position */
 .mouse-cursor {
   position: fixed;
   width: 5px;
@@ -8,11 +8,12 @@
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 9999;
-  transition: transform 0.05s ease-out, width 0.2s ease, height 0.2s ease;
+  transition: transform 0.05s linear;
   mix-blend-mode: difference;
+  will-change: transform;
 }
 
-/* Optional Trailing Cursor */
+/* Trailing Circle (big) - smooth follow */
 .mouse-trail {
   position: fixed;
   width: 80px;
@@ -23,6 +24,7 @@
   transform: translate(-50%, -50%);
   z-index: 9998;
   transition: transform 0.2s ease-out;
+  will-change: transform;
 }
 
 /* Interactive States */

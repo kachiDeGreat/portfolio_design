@@ -1,6 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Navbar.css";
-import { smoothScroll } from "../../../utils/smoothScroll";
 import { useTheme } from "../theme/ThemeContext";
 import { FaConnectdevelop } from "react-icons/fa6";
 import { WiMoonAltThirdQuarter } from "react-icons/wi";
@@ -20,22 +20,24 @@ const Navbar = () => {
   return (
     <nav className={`navbar ${theme}`}>
       <div className="navbar__container">
-        <div className="navbar__logo">
-          <ConnectIcon />
+        <div>
+          <Link className="navbar__logo" to="/" onClick={closeMenu}>
+            <ConnectIcon />
+          </Link>
         </div>
 
         {/* Desktop Links */}
         <div>
           <div className="navbar__links">
-            <NavLink href="#about" onClick={closeMenu}>
+            <RouterNavLink to="/about" onClick={closeMenu}>
               About
-            </NavLink>
-            <NavLink href="#projects" onClick={closeMenu}>
+            </RouterNavLink>
+            <RouterNavLink to="/projects" onClick={closeMenu}>
               Projects
-            </NavLink>
-            <NavLink href="#contact" onClick={closeMenu}>
+            </RouterNavLink>
+            <RouterNavLink to="/contact" onClick={closeMenu}>
               Contact
-            </NavLink>
+            </RouterNavLink>
             <button
               onClick={toggleTheme}
               style={{ marginTop: "-0.9rem", fontSize: "1.8rem" }}
@@ -64,15 +66,15 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       <div className={`navbar__mobile-menu ${isMenuOpen ? "open" : ""}`}>
-        <NavLink href="#about" onClick={closeMenu}>
+        <RouterNavLink to="/about" onClick={closeMenu}>
           About
-        </NavLink>
-        <NavLink href="#projects" onClick={closeMenu}>
+        </RouterNavLink>
+        <RouterNavLink to="/projects" onClick={closeMenu}>
           Projects
-        </NavLink>
-        <NavLink href="#contact" onClick={closeMenu}>
+        </RouterNavLink>
+        <RouterNavLink to="/contact" onClick={closeMenu}>
           Contact
-        </NavLink>
+        </RouterNavLink>
         <button
           onClick={toggleTheme}
           style={{ marginTop: "-0.9rem", fontSize: "1.8rem" }}
@@ -86,26 +88,18 @@ const Navbar = () => {
   );
 };
 
-const NavLink = ({
-  href,
+const RouterNavLink = ({
+  to,
   onClick,
   children,
 }: {
-  href: string;
+  to: string;
   onClick: () => void;
   children: string;
 }) => (
-  <a
-    href={href}
-    onClick={(e) => {
-      e.preventDefault();
-      smoothScroll(href.substring(1));
-      onClick();
-    }}
-    className="navbar__link"
-  >
+  <Link to={to} onClick={onClick} className="navbar__link">
     {children}
-  </a>
+  </Link>
 );
 
 export default Navbar;

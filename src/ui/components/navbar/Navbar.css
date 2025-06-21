@@ -1,6 +1,7 @@
 .navbar {
-  position: fixed;
-  top: 3.2%;
+  /* position: sticky; */
+  margin-top: 35px;
+  margin-bottom: -80px;
   left: 0;
   width: 100%;
   z-index: 1000;
@@ -20,11 +21,11 @@
   font-size: 3.2rem;
 }
 .navbar.light .navbar__logo {
-  color: #334155;
+  color: #334155 !important;
 }
 
 .navbar.dark .navbar__logo {
-  color: #e2e8f0;
+  color: #e2e8f0 !important;
 }
 
 .navbar__links {
