@@ -93,7 +93,7 @@ const About: React.FC = () => {
           </div>
           <div className="link-container">
             <div>
-              <Link to="/about" className="link_dev">
+              <Link to="/projects" className="link_dev">
                 View Projects <span className="arrow">→</span>
               </Link>
             </div>

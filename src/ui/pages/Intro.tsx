@@ -9,7 +9,7 @@ const Intro: React.FC = () => {
   return (
     <section className={`intro-section ${theme}`}>
       <div className="welcome-bg-text" aria-hidden="true">
-        Kachi.dev
+        onyekachi.dev
       </div>
       <h1 className="intro-heading" data-text="Hi, I'm KachiDeGreat">
         Hi, I'm KachiDeGreat
@@ -36,7 +36,7 @@ const Intro: React.FC = () => {
           smooth, high-quality livestreams that feel professional and polished.
           Whether it’s designing for the{" "}
           <span style={{ fontWeight: "bold" }}>web</span>, experimenting with
-          <span style={{ fontWeight: "bold" }}>AI</span>, or running a full{" "}
+          <span style={{ fontWeight: "bold" }}> AI</span>, or running a full{" "}
           <span style={{ fontWeight: "bold" }}>live broadcast</span>, I thrive
           at the intersection of{" "}
           <span style={{ fontWeight: "bold" }}>creativity and technology.</span>
