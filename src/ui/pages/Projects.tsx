@@ -37,7 +37,7 @@ const projects = [
     poster: "/videos/posters/goals-afrika.png",
     description: "Platform promoting citizen diplomacy and SDGs across Africa.",
     link: "https://kachidegreat.github.io/Goals-Afrika/",
-    techStack: ["JavaScript", "React", "Vercel", "Github Pages", "CSS"],
+    techStack: ["JavaScript", "React", "Vercel", "Github Pages", "CSS", "HTML"],
   },
 ];
 
