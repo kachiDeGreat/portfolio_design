@@ -9,7 +9,7 @@ const Intro: React.FC = () => {
   return (
     <section className={`intro-section ${theme}`}>
       <div className="welcome-bg-text" aria-hidden="true">
-        onyekachi.dev
+        Welcome
       </div>
       <h1 className="intro-heading" data-text="Hi, I'm KachiDeGreat">
         Hi, I'm KachiDeGreat

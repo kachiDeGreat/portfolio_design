@@ -1,18 +1,16 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MotionDiv } from "../components/animations/pageTransitions";
 import { useTheme } from "../components/theme/ThemeContext";
-import ayfCalabar from "../../img/ayf-cal.png";
-import quizApp from "../../img/quiz-app.png";
 import "./Projects.css";
 
-// Project data array
 const projects = [
   {
     id: 1,
     title: "AYF Calabar",
-    image: ayfCalabar,
+    video: "/videos/ayf-cal.mp4",
+    poster: "/videos/posters/ayf-cal.png",
     description:
-      "Developed the official AYF Calabar website with conference registration capabilities, member management system, and dynamic content updates. Implemented secure payment processing and mobile-responsive design that increased member engagement by 40%.",
+      "Developed the official AYF Calabar website with conference registration, member management, and dynamic content updates.",
     link: "https://ayfcalabar.org.ng/",
     techStack: [
       "JavaScript",
@@ -25,17 +23,66 @@ const projects = [
   {
     id: 2,
     title: "Nursing Quiz App (UNICAL)",
-    image: quizApp,
+    video: "/videos/quiz-app.mp4",
+    poster: "/videos/posters/quiz-app.png",
     description:
-      "Built a secure quiz application for nursing students featuring question randomization, timers, and student verification. Implemented Firebase authentication to prevent multiple submissions after initial challenges with Google Sheets. Test with registration numbers: 22/12345678, 11/22222222, or 11/11111111TR",
-    link: "https://quiz-app-ashen-eight-96.vercel.app/", // Add your actual link
+      "Secure quiz app for nursing students with question randomization and verification.",
+    link: "https://quiz-app-ashen-eight-96.vercel.app/",
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
-  // Add more projects as needed
+  {
+    id: 3,
+    title: "Goals Afrika",
+    video: "/videos/goals-afrika.mp4",
+    poster: "/videos/posters/goals-afrika.png",
+    description: "Platform promoting citizen diplomacy and SDGs across Africa.",
+    link: "https://kachidegreat.github.io/Goals-Afrika/",
+    techStack: ["JavaScript", "React", "Vercel", "Github Pages", "CSS"],
+  },
 ];
 
 const Projects: React.FC = () => {
   const { theme } = useTheme();
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const hasStarted = useRef<boolean[]>([]);
+  const [videoLoaded, setVideoLoaded] = useState<boolean[]>([]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry, index) => {
+          const video = videoRefs.current[index];
+          if (!video || hasStarted.current[index]) return;
+
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              video.play().catch((e) => console.log("Autoplay prevented:", e));
+              hasStarted.current[index] = true;
+            }, index * 2000);
+          } else {
+            video.pause();
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    videoRefs.current.forEach((video) => {
+      if (video) observer.observe(video);
+    });
+
+    return () => {
+      videoRefs.current.forEach((video) => {
+        if (video) observer.unobserve(video);
+      });
+    };
+  }, []);
+
+  useEffect(() => {
+    videoRefs.current = videoRefs.current.slice(0, projects.length);
+    hasStarted.current = new Array(projects.length).fill(false);
+    setVideoLoaded(new Array(projects.length).fill(false));
+  }, []);
 
   return (
     <MotionDiv>
@@ -46,10 +93,36 @@ const Projects: React.FC = () => {
           </div>
           <h1 className="project-heading">Projects</h1>
           <div className="projects-grid">
-            {projects.map((project) => (
+            {projects.map((project, index) => (
               <div key={project.id} className="project-card">
-                <div className="project-image-container">
-                  <img src={project.image} alt={project.title} />
+                <div className="project-video-container">
+                  {!videoLoaded[index] && (
+                    <div className="video-placeholder">
+                      <img
+                        src={project.poster}
+                        alt={`${project.title} preview`}
+                      />
+                    </div>
+                  )}
+                  <video
+                    ref={(el) => {
+                      if (el) videoRefs.current[index] = el;
+                    }}
+                    src={project.video}
+                    loop
+                    muted
+                    playsInline
+                    poster={project.poster}
+                    className="project-video"
+                    aria-label={`${project.title} demo`}
+                    onCanPlay={() => {
+                      setVideoLoaded((prev) => {
+                        const updated = [...prev];
+                        updated[index] = true;
+                        return updated;
+                      });
+                    }}
+                  />
                   <a
                     href={project.link}
                     target="_blank"
