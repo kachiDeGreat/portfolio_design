@@ -1,3 +1,6 @@
+"use client";
+
+import { useState, useEffect } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -14,15 +17,29 @@ import MouseMove from "./ui/components/mouseMove/MouseMove";
 import TechBackground from "./ui/components/techBg/TechBackground";
 import { ThemeProvider } from "./ui/components/theme/ThemeContext";
 import Navbar from "./ui/components/navbar/Navbar";
+import ScrollToTop from "./ui/components/scrollToTop/ScrollToTop";
+import LoadingScreen from "./ui/components/loadingScreen/LoadingScreen";
 
 function AppContent() {
   const location = useLocation();
+  const [isInitialLoad, setIsInitialLoad] = useState(true);
+
+  // Handle initial app load only
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsInitialLoad(false);
+    }, 2500); // Show loading for 2.5 seconds on initial load only
+
+    return () => clearTimeout(timer);
+  }, []);
 
   return (
     <div className="app-container">
+      <LoadingScreen isLoading={isInitialLoad} isInitialLoad={isInitialLoad} />
       <TechBackground />
       <Navbar />
       <MouseMove />
+      <ScrollToTop />
       <div className="main-content-wrapper">
         <AnimatePresence mode="wait" initial={false}>
           <Routes location={location} key={location.pathname}>

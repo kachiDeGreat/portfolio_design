@@ -45,7 +45,7 @@ const Intro: React.FC = () => {
       <div className="link-container">
         <div>
           <Link to="/about" className="link_dev">
-            About me <span className="arrow">→</span>
+            See More About Me. <span className="arrow">→</span>
           </Link>
         </div>
         <div>

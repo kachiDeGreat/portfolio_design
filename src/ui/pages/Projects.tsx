@@ -1,24 +1,21 @@
-import React, { useEffect, useRef, useState } from "react";
+import type React from "react";
+import { useEffect, useRef, useState } from "react";
 import { MotionDiv } from "../components/animations/pageTransitions";
 import { useTheme } from "../components/theme/ThemeContext";
 import "./Projects.css";
+import { Link } from "react-router-dom";
+import SocialLinks from "../components/socialLinks/SocialLinks";
 
 const projects = [
   {
     id: 1,
-    title: "AYF Calabar",
-    video: "/videos/ayf-cal.mp4",
-    poster: "/videos/posters/ayf-cal.png",
+    title: "Knowledge City",
+    video: "/videos/kc.mp4",
+    poster: "/videos/posters/kc.png",
     description:
-      "Developed the official AYF Calabar website with conference registration, member management, and dynamic content updates.",
-    link: "https://ayfcalabar.org.ng/",
-    techStack: [
-      "JavaScript",
-      "Bootstrap CSS",
-      "Animate.css",
-      "Firebase",
-      "Google Sheets App Script",
-    ],
+      "An e-learning platform built by D'roid Technologies Ltd. I contributed to key modules such as the Backpack section, Coins system, Diary feature, and courses section.",
+    link: "https://kachidegreat.github.io/Goals-Afrika/",
+    techStack: ["TypeScript", "React", "Next.js", "Vercel", "Firebase"],
   },
   {
     id: 2,
@@ -37,7 +34,29 @@ const projects = [
     poster: "/videos/posters/goals-afrika.png",
     description: "Platform promoting citizen diplomacy and SDGs across Africa.",
     link: "https://kachidegreat.github.io/Goals-Afrika/",
-    techStack: ["JavaScript", "React", "Vercel", "Github Pages", "CSS"],
+    techStack: [
+      "JavaScript",
+      "React",
+      "Vercel",
+      "Github Pages",
+      "Bootstrap CSS",
+    ],
+  },
+  {
+    id: 4,
+    title: "AYF Calabar",
+    video: "/videos/ayf-cal.mp4",
+    poster: "/videos/posters/ayf-cal.png",
+    description:
+      "Developed the official AYF Calabar website with conference registration, member management, and dynamic content updates.",
+    link: "https://ayfcalabar.org.ng/",
+    techStack: [
+      "JavaScript",
+      "Bootstrap CSS",
+      "Animate.css",
+      "Firebase",
+      "Google Sheets App Script",
+    ],
   },
 ];
 
@@ -99,7 +118,7 @@ const Projects: React.FC = () => {
                   {!videoLoaded[index] && (
                     <div className="video-placeholder">
                       <img
-                        src={project.poster}
+                        src={project.poster || "/placeholder.svg"}
                         alt={`${project.title} preview`}
                       />
                     </div>
@@ -123,6 +142,20 @@ const Projects: React.FC = () => {
                       });
                     }}
                   />
+
+                  {/* Project details overlay */}
+                  <div className="project-details-overlay">
+                    <div className="project-details-content">
+                      <h2 className="project-card-header">{project.title}</h2>
+                      <p className="project-card-body">{project.description}</p>
+                      <div className="project-tech-tags">
+                        {project.techStack.map((tech) => (
+                          <span key={tech}>{tech}</span>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+
                   <a
                     href={project.link}
                     target="_blank"
@@ -147,18 +180,42 @@ const Projects: React.FC = () => {
                     </svg>
                   </a>
                 </div>
-                <h2 className="project-card-header">{project.title}</h2>
-                <p className="project-card-body">{project.description}</p>
-                <div className="project-tech-tags">
-                  {project.techStack.map((tech) => (
-                    <span key={tech}>{tech}</span>
-                  ))}
-                </div>
               </div>
             ))}
           </div>
+          <br />
+          <div className="link-container">
+            <div>
+              <Link to="/projects" className="link_dev">
+                Lets Go To My Resume. <span className="arrow">→</span>
+              </Link>
+            </div>
+            <div>
+              <SocialLinks />
+            </div>
+          </div>
         </div>
       </div>
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
     </MotionDiv>
   );
 };

@@ -94,7 +94,7 @@ const About: React.FC = () => {
           <div className="link-container">
             <div>
               <Link to="/projects" className="link_dev">
-                View Projects <span className="arrow">→</span>
+                Lets Continue To Projects <span className="arrow">→</span>
               </Link>
             </div>
             <div>
