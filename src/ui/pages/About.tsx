@@ -16,7 +16,7 @@ const About: React.FC = () => {
             About Me.
           </div>
           <h1 className="about-heading">About Me.</h1>
-          <div className="about-div">
+          {/* <div className="about-div">
             <h2 className="about-div-header">Hello there!</h2>
             <p className="about-div-body">
               I'm Richard Godswill Onyekachi, a passionate frontend developer
@@ -25,7 +25,7 @@ const About: React.FC = () => {
               I specialize in crafting intelligent, user-centric web experiences
               at the intersection of cutting-edge frontend technologies and AI.
             </p>
-          </div>
+          </div> */}
           {/* ----------   */}
           <div className="about-div">
             <h2 className="about-div-header">My Expertise</h2>
@@ -94,7 +94,7 @@ const About: React.FC = () => {
           <div className="link-container">
             <div>
               <Link to="/projects" className="link_dev">
-                Lets Continue To Projects <span className="arrow">→</span>
+                Lets Continue To Projects. <span className="arrow">→</span>
               </Link>
             </div>
             <div>

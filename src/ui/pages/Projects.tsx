@@ -58,6 +58,26 @@ const projects = [
       "Google Sheets App Script",
     ],
   },
+  {
+    id: 5,
+    title: "Diocese Of Calabar",
+    video: "/videos/dio-cal.mp4",
+    poster: "/videos/posters/dio-cal.png",
+    description:
+      "Official website of the Diocese of Calabar, Church of Nigeria (Anglican Communion)",
+    link: "https://diocese-of-calabar-website.vercel.app/",
+    techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
+  },
+  {
+    id: 6,
+    title: "D'roid Technologies Ltd",
+    video: "/videos/droid.mp4",
+    poster: "/videos/posters/droid.png",
+    description:
+      "Official website of D'roid Technologies Ltd, showcasing our services and projects.",
+    link: "https://www.droidtechhq.com/",
+    techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
+  },
 ];
 
 const Projects: React.FC = () => {
@@ -196,25 +216,6 @@ const Projects: React.FC = () => {
           </div>
         </div>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
       <br />
     </MotionDiv>
   );

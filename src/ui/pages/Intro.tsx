@@ -30,7 +30,7 @@ const Intro: React.FC = () => {
           Beyond the browser,{" "}
           <span style={{ fontWeight: "bold" }}>
             I’m a live stream production expert
-          </span>{" "}
+          </span>
           , setting up from multi-camera inputs to audio routing, streaming
           software and overlays evert. I help teams and organizations deliver
           smooth, high-quality livestreams that feel professional and polished.

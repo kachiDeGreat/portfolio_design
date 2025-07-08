@@ -14,7 +14,7 @@
 .brand-text {
   font-size: clamp(3rem, 12vw, 8rem);
   font-weight: 900;
-  font-family: "Merriweather", serif !important;
+  /* font-family: "Merriweather", serif !important; */
   color: #e2e8f0;
   animation: pulse 1.5s ease-in-out infinite;
 }
