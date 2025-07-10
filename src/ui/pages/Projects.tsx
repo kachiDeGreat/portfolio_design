@@ -102,6 +102,7 @@ const Projects: React.FC = () => {
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
   const hasStarted = useRef<boolean[]>([]);
   const [videoLoaded, setVideoLoaded] = useState<boolean[]>([]);
+  const [posterLoaded, setPosterLoaded] = useState<boolean[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -138,12 +139,13 @@ const Projects: React.FC = () => {
     videoRefs.current = videoRefs.current.slice(0, projects.length);
     hasStarted.current = new Array(projects.length).fill(false);
     setVideoLoaded(new Array(projects.length).fill(false));
+    setPosterLoaded(new Array(projects.length).fill(false));
   }, []);
 
   return (
     <MotionDiv>
       <div className="main-content">
-        <div className={`project-content ${theme}`}>  
+        <div className={`project-content ${theme}`}>
           <div className="welcome-bg-text" aria-hidden="true">
             Projects.
           </div>
@@ -152,14 +154,36 @@ const Projects: React.FC = () => {
             {projects.map((project, index) => (
               <div key={project.id} className="project-card">
                 <div className="project-video-container">
-                  {!videoLoaded[index] && (
+                  {(!videoLoaded[index] || !posterLoaded[index]) && (
+                    <div className="video-loading-spinner">
+                      <div className="spinner"></div>
+                    </div>
+                  )}
+
+                  {project.poster && !posterLoaded[index] && (
+                    <img
+                      src={project.poster}
+                      alt=""
+                      style={{ display: "none" }}
+                      onLoad={() => {
+                        setPosterLoaded((prev) => {
+                          const updated = [...prev];
+                          updated[index] = true;
+                          return updated;
+                        });
+                      }}
+                    />
+                  )}
+
+                  {posterLoaded[index] && !videoLoaded[index] && (
                     <div className="video-placeholder">
                       <img
-                        src={project.poster || "/placeholder.svg"}
+                        src={project.poster}
                         alt={`${project.title} preview`}
                       />
                     </div>
                   )}
+
                   <video
                     ref={(el) => {
                       if (el) videoRefs.current[index] = el;
@@ -168,7 +192,7 @@ const Projects: React.FC = () => {
                     loop
                     muted
                     playsInline
-                    poster={project.poster}
+                    poster={posterLoaded[index] ? project.poster : undefined}
                     className="project-video"
                     aria-label={`${project.title} demo`}
                     onCanPlay={() => {
@@ -180,7 +204,6 @@ const Projects: React.FC = () => {
                     }}
                   />
 
-                  {/* Project details overlay */}
                   <div className="project-details-overlay">
                     <div className="project-details-content">
                       <h2 className="project-card-header">{project.title}</h2>

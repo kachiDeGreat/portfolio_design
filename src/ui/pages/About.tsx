@@ -30,10 +30,7 @@ const About: React.FC = () => {
           <div className="about-div">
             <h2 className="about-div-header">My Expertise</h2>
             <p className="about-div-body">
-              <span style={{ fontWeight: "bold" }}>
-                {" "}
-                Frontend Development [View GitHub]
-              </span>{" "}
+              <span style={{ fontWeight: "bold" }}> Frontend Development</span>{" "}
               I specialize in building dynamic interfaces using modern
               technologies including React and Next.js for scalable
               applications, Tailwind CSS for efficient responsive designs,
@@ -94,7 +91,7 @@ const About: React.FC = () => {
           <div className="link-container">
             <div>
               <Link to="/projects" className="link_dev">
-                Lets Continue To Projects. <span className="arrow">→</span>
+                Projects. <span className="arrow">→</span>
               </Link>
             </div>
             <div>

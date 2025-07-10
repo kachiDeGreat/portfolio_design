@@ -16,15 +16,22 @@ const SocialLinks: React.FC = () => {
   const Msteams = BsMicrosoftTeams as React.ComponentType<
     React.SVGProps<SVGSVGElement>
   >;
+  const openLink = (url: string) => {
+    window.open(url, "_blank");
+  };
   return (
     <div className={`social-links ${theme}`}>
-      <button>
+      <button onClick={() => openLink("https://github.com/kachiDeGreat")}>
         <Github />
       </button>
-      <button>
+      <button
+        onClick={() =>
+          openLink("https://www.linkedin.com/in/richard-godswill/")
+        }
+      >
         <Linkedin />
       </button>
-      <button>
+      <button onClick={() => openLink("https://github.com/kachiDeGreat")}>
         <Msteams />
       </button>
     </div>

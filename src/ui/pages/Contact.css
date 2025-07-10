@@ -221,6 +221,13 @@
     padding: 1rem 0.75rem 0.5rem;
   }
 }
+.contact-container.light .link_dev {
+  color: #4a5568;
+}
+
+.contact-container.dark .link_dev {
+  color: #e2e8f0;
+}
 
 @media (max-width: 480px) {
   .contact-content {

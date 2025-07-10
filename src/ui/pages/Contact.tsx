@@ -5,6 +5,8 @@ import { MotionDiv } from "../components/animations/pageTransitions";
 import emailjs from "emailjs-com";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { Link } from "react-router-dom";
+import SocialLinks from "../components/socialLinks/SocialLinks";
 
 const SERVICE_ID = "service_1yu2r8q";
 const TEMPLATE_ID = "template_xduy5jc";
@@ -118,6 +120,17 @@ const Contact: React.FC = () => {
                 {isSending ? "Sending..." : "Send Message"}
               </button>
             </form>
+          </div>
+          <div className="link-container" style={{ marginTop: "-3rem" }}>
+            <div>
+              <Link to="/contact" className="link_dev">
+                Back Home
+                <span className="arrow">→</span>
+              </Link>
+            </div>
+            <div>
+              <SocialLinks />
+            </div>
           </div>
         </div>
       </div>
