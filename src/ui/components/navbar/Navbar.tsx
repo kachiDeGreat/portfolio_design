@@ -53,6 +53,15 @@ const Navbar = () => {
 
         <div className="navbar__right">
           <button
+            onClick={toggleTheme}
+            className="theme-toggle"
+            aria-label={`Switch to ${
+              theme === "light" ? "dark" : "light"
+            } mode`}
+          >
+            {theme === "light" ? <MoonIcon /> : <MoonIcon />}
+          </button>
+          <button
             className={`navbar__hamburger ${isMenuOpen ? "open" : ""}`}
             onClick={toggleMenu}
             aria-label="Menu"
@@ -75,14 +84,6 @@ const Navbar = () => {
         <RouterNavLink to="/contact" onClick={closeMenu}>
           Contact
         </RouterNavLink>
-        <button
-          onClick={toggleTheme}
-          style={{ marginTop: "-0.9rem", fontSize: "1.8rem" }}
-          className="theme-toggle"
-          aria-label={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
-        >
-          {theme === "light" ? <MoonIcon /> : <MoonIcon />}
-        </button>
       </div>
     </nav>
   );

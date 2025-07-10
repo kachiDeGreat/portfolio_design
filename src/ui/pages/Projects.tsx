@@ -19,6 +19,23 @@ const projects = [
   },
   {
     id: 2,
+    title: "Nerves Website",
+    video: "/videos/nerves.mp4",
+    poster: "/videos/posters/nerves.png",
+    description:
+      "Online watch store built by D'roid Technologies Ltd. I contributed to the development of the website.",
+    link: "https://www.droidtechhq.com/",
+    techStack: [
+      "TypeScript",
+      "React",
+      "Next",
+      "Firebase",
+      "Framer Motion",
+      "Prisma",
+    ],
+  },
+  {
+    id: 3,
     title: "Nursing Quiz App (UNICAL)",
     video: "/videos/quiz-app.mp4",
     poster: "/videos/posters/quiz-app.png",
@@ -28,7 +45,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Goals Afrika",
     video: "/videos/goals-afrika.mp4",
     poster: "/videos/posters/goals-afrika.png",
@@ -40,22 +57,6 @@ const projects = [
       "Vercel",
       "Github Pages",
       "Bootstrap CSS",
-    ],
-  },
-  {
-    id: 4,
-    title: "AYF Calabar",
-    video: "/videos/ayf-cal.mp4",
-    poster: "/videos/posters/ayf-cal.png",
-    description:
-      "Developed the official AYF Calabar website with conference registration, member management, and dynamic content updates.",
-    link: "https://ayfcalabar.org.ng/",
-    techStack: [
-      "JavaScript",
-      "Bootstrap CSS",
-      "Animate.css",
-      "Firebase",
-      "Google Sheets App Script",
     ],
   },
   {
@@ -77,6 +78,22 @@ const projects = [
       "Official website of D'roid Technologies Ltd, showcasing our services and projects.",
     link: "https://www.droidtechhq.com/",
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
+  },
+  {
+    id: 7,
+    title: "AYF Calabar",
+    video: "/videos/ayf-cal.mp4",
+    poster: "/videos/posters/ayf-cal.png",
+    description:
+      "Developed the official AYF Calabar website with conference registration, member management, and dynamic content updates.",
+    link: "https://ayfcalabar.org.ng/",
+    techStack: [
+      "JavaScript",
+      "Bootstrap CSS",
+      "Animate.css",
+      "Firebase",
+      "Google Sheets App Script",
+    ],
   },
 ];
 
@@ -126,7 +143,7 @@ const Projects: React.FC = () => {
   return (
     <MotionDiv>
       <div className="main-content">
-        <div className={`project-content ${theme}`}>
+        <div className={`project-content ${theme}`}>  
           <div className="welcome-bg-text" aria-hidden="true">
             Projects.
           </div>
@@ -206,7 +223,7 @@ const Projects: React.FC = () => {
           <br />
           <div className="link-container">
             <div>
-              <Link to="/projects" className="link_dev">
+              <Link to="/resume" className="link_dev">
                 Lets Go To My Resume. <span className="arrow">→</span>
               </Link>
             </div>

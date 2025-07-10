@@ -19,6 +19,7 @@ import { ThemeProvider } from "./ui/components/theme/ThemeContext";
 import Navbar from "./ui/components/navbar/Navbar";
 import ScrollToTop from "./ui/components/scrollToTop/ScrollToTop";
 import LoadingScreen from "./ui/components/loadingScreen/LoadingScreen";
+import Resume from "./ui/pages/Resume";
 
 function AppContent() {
   const location = useLocation();
@@ -46,6 +47,7 @@ function AppContent() {
             <Route path="/" element={<Main />} />
             <Route path="/about" element={<About />} />
             <Route path="/projects" element={<Projects />} />
+            <Route path="/resume" element={<Resume />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </AnimatePresence>

@@ -1,6 +1,6 @@
 .intro-section {
   text-align: left;
-  padding: 2rem;
+  /* padding: 2rem; */
   transition: all 0.3s ease;
 }
 
@@ -297,5 +297,11 @@
     font-size: 20vw;
     left: 5%;
     opacity: 0.05;
+  }
+}
+
+@media (max-width: 480px) {
+  .intro-heading {
+    font-size: 1.5rem;
   }
 }

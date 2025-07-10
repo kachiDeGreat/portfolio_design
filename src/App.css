@@ -37,7 +37,7 @@ html {
 .main-content {
   width: 100%;
   max-width: 920px;
-  padding: 2rem;
+  /* padding: 2rem; */
   margin: 0 auto;
   text-align: center;
 }
@@ -45,15 +45,9 @@ html {
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .main-content-wrapper {
-    padding-top: 60px; /* Adjusted for mobile navbar */
+    padding-top: 30px; /* Adjusted for mobile navbar */
   }
 
-  .main-content {
-    padding: 1.5rem;
-  }
-}
-
-@media (max-width: 480px) {
   .main-content {
     padding: 1rem;
   }
