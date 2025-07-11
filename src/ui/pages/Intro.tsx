@@ -12,7 +12,7 @@ const Intro: React.FC = () => {
       <div className="main-content">
         <section className={`intro-section ${theme}`}>
           <div className="welcome-bg-text" aria-hidden="true">
-            Welcome
+            Onyekachi.dev
           </div>
           <h1 className="intro-heading" data-text="Hi, I'm KachiDeGreat">
             Hi, I'm KachiDeGreat

@@ -247,7 +247,7 @@ const Projects: React.FC = () => {
           <div className="link-container">
             <div>
               <Link to="/resume" className="link_dev">
-                Lets Go To My Resume. <span className="arrow">→</span>
+                Lets Go To My Resume <span className="arrow">→</span>
               </Link>
             </div>
             <div>

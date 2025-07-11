@@ -222,7 +222,7 @@ const Resume: React.FC = () => {
                     <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71" />
                   </svg>
                   <a
-                    href="https://bit.ly/DevRic"
+                    href="https://www.onyekachi.dev/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -313,11 +313,11 @@ const Resume: React.FC = () => {
               <p className="projects-text">
                 Links to some of my work can be found on{" "}
                 <a
-                  href="https://bit.ly/DevRic"
+                  href="https://www.onyekachi.dev/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  https://bit.ly/DevRic
+                  https://www.onyekachi.dev/
                 </a>
                 . Additional information and code walk-throughs are available
                 upon request via a scheduled demo call.

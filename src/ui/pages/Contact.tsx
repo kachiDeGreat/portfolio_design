@@ -123,7 +123,7 @@ const Contact: React.FC = () => {
           </div>
           <div className="link-container" style={{ marginTop: "-3rem" }}>
             <div>
-              <Link to="/contact" className="link_dev">
+              <Link to="/" className="link_dev">
                 Back Home
                 <span className="arrow">→</span>
               </Link>

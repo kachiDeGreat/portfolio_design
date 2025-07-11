@@ -12,6 +12,7 @@ const About: React.FC = () => {
     <MotionDiv>
       <div className="main-content">
         <div className={`about-content ${theme}`}>
+          <br />
           <div className="welcome-bg-text" aria-hidden="true">
             About Me.
           </div>
@@ -91,7 +92,7 @@ const About: React.FC = () => {
           <div className="link-container">
             <div>
               <Link to="/projects" className="link_dev">
-                Projects. <span className="arrow">→</span>
+                Projects <span className="arrow">→</span>
               </Link>
             </div>
             <div>
