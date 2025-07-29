@@ -9,6 +9,15 @@ import SocialLinks from "../components/socialLinks/SocialLinks";
 const projects = [
   {
     id: 1,
+    title: "Drop Img",
+    video: "https://res.cloudinary.com/dilzshtrf/video/upload/v1753750817/Untitled_video_-_Made_with_Clipchamp_kvwmbi.mp4",
+    poster: "https://dropimg.onyekachi.dev/zjrzgtgi4fiq0bwu1iep",
+    description: "Fast, Anonymous Image Hosting for Developers.",
+    link: "https://dropimg.onyekachi.dev/",
+    techStack: ["TypeScript", "React", "Cloudinary", "Vercel"],
+  },
+  {
+    id: 2,
     title: "Knowledge City",
     video: "/videos/kc.mp4",
     poster: "/videos/posters/kc.png",
@@ -18,7 +27,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Next.js", "Vercel", "Firebase"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Nerves Website",
     video: "/videos/nerves.mp4",
     poster: "/videos/posters/nerves.png",
@@ -35,7 +44,7 @@ const projects = [
     ],
   },
   {
-    id: 3,
+    id: 4,
     title: "Nursing Quiz App (UNICAL)",
     video: "/videos/quiz-app.mp4",
     poster: "/videos/posters/quiz-app.png",
@@ -45,7 +54,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
   {
-    id: 4,
+    id: 5,
     title: "Goals Afrika",
     video: "/videos/goals-afrika.mp4",
     poster: "/videos/posters/goals-afrika.png",
@@ -60,7 +69,7 @@ const projects = [
     ],
   },
   {
-    id: 5,
+    id: 6,
     title: "Diocese Of Calabar",
     video: "/videos/dio-cal.mp4",
     poster: "/videos/posters/dio-cal.png",
@@ -70,7 +79,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
   {
-    id: 6,
+    id: 7,
     title: "D'roid Technologies Ltd",
     video: "/videos/droid.mp4",
     poster: "/videos/posters/droid.png",
@@ -80,7 +89,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
   {
-    id: 7,
+    id: 8,
     title: "AYF Calabar",
     video: "/videos/ayf-cal.mp4",
     poster: "/videos/posters/ayf-cal.png",
