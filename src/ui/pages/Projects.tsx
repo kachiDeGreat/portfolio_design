@@ -10,30 +10,43 @@ const projects = [
   {
     id: 1,
     title: "Drop Img",
-    video: "https://res.cloudinary.com/dilzshtrf/video/upload/v1753750817/Untitled_video_-_Made_with_Clipchamp_kvwmbi.mp4",
+    video:
+      "https://res.cloudinary.com/dilzshtrf/video/upload/v1753750817/Untitled_video_-_Made_with_Clipchamp_kvwmbi.mp4",
     poster: "https://dropimg.onyekachi.dev/zjrzgtgi4fiq0bwu1iep",
-    description: "Fast, Anonymous Image Hosting for Developers.",
+    description:
+      "Fast, anonymous image hosting for developers. Upload and share instantly with direct embed links.",
     link: "https://dropimg.onyekachi.dev/",
     techStack: ["TypeScript", "React", "Cloudinary", "Vercel"],
   },
   {
     id: 2,
+    title: "CGPA Calculator",
+    video:
+      "https://res.cloudinary.com/dilzshtrf/video/upload/CGPA_Calculator_-_Onyekachi.dev_-_Google_Chrome_2025-08-11_22-15-52_ko1njc.mp4",
+    poster: "https://dropimg.onyekachi.dev/w0sdoqv7rvo9thsrtazq",
+    description:
+      "A web app to help students calculate GPA per semester and CGPA across multiple years. Features real-time calculations, offline saving, and mobile-friendly design.",
+    link: "https://kachidegreat.github.io/Goals-Afrika/",
+    techStack: ["TypeScript", "React", "Vercel"],
+  },
+  {
+    id: 3,
     title: "Knowledge City",
     video: "/videos/kc.mp4",
     poster: "/videos/posters/kc.png",
     description:
-      "An e-learning platform built by D'roid Technologies Ltd. I contributed to key modules such as the Backpack section, Coins system, Diary feature, and courses section.",
+      "An e-learning platform with Backpack, Coins system, Diary, and Courses sections — built in collaboration with D'roid Technologies Ltd.",
     link: "https://kachidegreat.github.io/Goals-Afrika/",
     techStack: ["TypeScript", "React", "Next.js", "Vercel", "Firebase"],
   },
   {
-    id: 3,
+    id: 4,
     title: "Nerves Website",
     video: "/videos/nerves.mp4",
     poster: "/videos/posters/nerves.png",
     description:
-      "Online watch store built by D'roid Technologies Ltd. I contributed to the development of the website.",
-    link: "https://www.droidtechhq.com/",
+      "E-commerce website for an online watch store, developed with modern UI and smooth shopping experience.",
+    link: "https://nerves-f3753.web.app",
     techStack: [
       "TypeScript",
       "React",
@@ -44,21 +57,22 @@ const projects = [
     ],
   },
   {
-    id: 4,
+    id: 5,
     title: "Nursing Quiz App (UNICAL)",
     video: "/videos/quiz-app.mp4",
     poster: "/videos/posters/quiz-app.png",
     description:
-      "Secure quiz app for nursing students with question randomization and verification.",
+      "Secure quiz app for nursing students with randomized questions, verification, and real-time scoring.",
     link: "https://quiz-app-ashen-eight-96.vercel.app/",
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Goals Afrika",
     video: "/videos/goals-afrika.mp4",
     poster: "/videos/posters/goals-afrika.png",
-    description: "Platform promoting citizen diplomacy and SDGs across Africa.",
+    description:
+      "Platform promoting citizen diplomacy and SDGs across Africa through content, projects, and campaigns.",
     link: "https://kachidegreat.github.io/Goals-Afrika/",
     techStack: [
       "JavaScript",
@@ -69,32 +83,32 @@ const projects = [
     ],
   },
   {
-    id: 6,
+    id: 7,
     title: "Diocese Of Calabar",
     video: "/videos/dio-cal.mp4",
     poster: "/videos/posters/dio-cal.png",
     description:
-      "Official website of the Diocese of Calabar, Church of Nigeria (Anglican Communion)",
+      "Official website of the Diocese of Calabar, Church of Nigeria (Anglican Communion), featuring events, news, and resources.",
     link: "https://diocese-of-calabar-website.vercel.app/",
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
   {
-    id: 7,
+    id: 8,
     title: "D'roid Technologies Ltd",
     video: "/videos/droid.mp4",
     poster: "/videos/posters/droid.png",
     description:
-      "Official website of D'roid Technologies Ltd, showcasing our services and projects.",
+      "Official website of D'roid Technologies Ltd, showcasing services, projects, and company profile.",
     link: "https://www.droidtechhq.com/",
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
   {
-    id: 8,
+    id: 9,
     title: "AYF Calabar",
     video: "/videos/ayf-cal.mp4",
     poster: "/videos/posters/ayf-cal.png",
     description:
-      "Developed the official AYF Calabar website with conference registration, member management, and dynamic content updates.",
+      "Official AYF Calabar website with conference registration, member management, and dynamic content updates.",
     link: "https://ayfcalabar.org.ng/",
     techStack: [
       "JavaScript",
