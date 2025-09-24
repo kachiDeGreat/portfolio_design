@@ -26,7 +26,7 @@ const projects = [
     poster: "https://dropimg.onyekachi.dev/w0sdoqv7rvo9thsrtazq",
     description:
       "A web app to help students calculate GPA per semester and CGPA across multiple years. Features real-time calculations, offline saving, and mobile-friendly design.",
-    link: "https://kachidegreat.github.io/Goals-Afrika/",
+    link: "https://cgpa-calculator.onyekachi.dev/",
     techStack: ["TypeScript", "React", "Vercel"],
   },
   {
@@ -42,8 +42,9 @@ const projects = [
   {
     id: 4,
     title: "Nerves Website",
-    video: "/videos/nerves.mp4",
-    poster: "/videos/posters/nerves.png",
+    video:
+      "https://res.cloudinary.com/dilzshtrf/video/upload/Nerve_Systems_Network___E-Commerce_Transport_Solutions_-_Google_Chrome_2025-09-24_22-19-07_online-video-cutter.com_bewfhd.mp4",
+    poster: "https://dropimg.onyekachi.dev/zfolpzg55hwtletysyaz",
     description:
       "E-commerce website for an online watch store, developed with modern UI and smooth shopping experience.",
     link: "https://nerves-f3753.web.app",
@@ -59,8 +60,9 @@ const projects = [
   {
     id: 5,
     title: "Nursing Quiz App (UNICAL)",
-    video: "/videos/quiz-app.mp4",
-    poster: "/videos/posters/quiz-app.png",
+    video:
+      "https://res.cloudinary.com/dilzshtrf/video/upload/Nerve_Systems_Network___E-Commerce_Transport_Solutions_-_Google_Chrome_2025-09-24_22-19-07_online-video-cutter.com_1_gipvfl.mp4",
+    poster: "https://dropimg.onyekachi.dev/myvhfhezvsfqldph1gvc",
     description:
       "Secure quiz app for nursing students with randomized questions, verification, and real-time scoring.",
     link: "https://quiz-app-ashen-eight-96.vercel.app/",
@@ -117,6 +119,17 @@ const projects = [
       "Firebase",
       "Google Sheets App Script",
     ],
+  },
+  {
+    id: 10,
+    title: "TASKFLOW",
+    video:
+      "https://res.cloudinary.com/dilzshtrf/video/upload/Nerve_Systems_Network___E-Commerce_Transport_Solutions_-_Google_Chrome_2025-09-24_22-19-07_online-video-cutter.com_2_jztgol.mp4",
+    poster: "https://dropimg.onyekachi.dev/fecf0066n574v6qo7nxq",
+    description:
+      "TaskFlow is an intelligent task management app that uses custom rules to automatically prioritize your to-do list based on your unique workflow and preferences.",
+    link: "https://taskflowapp.onyekachi.dev/",
+    techStack: ["TypeScript", "React", "Vite", "Firebase Firestore", "Vercel"],
   },
 ];
 

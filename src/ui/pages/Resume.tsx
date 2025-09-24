@@ -302,7 +302,7 @@ const Resume: React.FC = () => {
                       University of Cross River State (UNICROSS)
                     </p>
                   </div>
-                  <span className="education-period">2020 – Present</span>
+                  <span className="education-period">2020 – 2025</span>
                 </div>
               </div>
             </section>
