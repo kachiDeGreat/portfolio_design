@@ -9,6 +9,17 @@ import SocialLinks from "../components/socialLinks/SocialLinks";
 const projects = [
   {
     id: 1,
+    title: "Nigerian Nursing Success",
+    video:
+      "https://res.cloudinary.com/dilzshtrf/video/upload/v1760471334/Nigerian_Nursing_Success_-_Pass_Your_Nursing_Council_Exams_with_Confidence_-_Google_Chrome_2025-10-14_20-42-06_online-video-cutter.com_hy14wi.mp4",
+    poster: "https://dropimg.onyekachi.dev/tq5fwnfzncp8y1n1kvjo",
+    description:
+      "Nigerian Nursing Success is an educational technology platform that provides comprehensive online resources to help nursing students in Nigeria prepare for and pass their nursing professional exams with confidence.",
+    link: "https://nigeriannursingsuccess.com.ng/",
+    techStack: ["TypeScript", "React", "Vite", "Firebase Firestore", "Vercel"],
+  },
+  {
+    id: 2,
     title: "Drop Img",
     video:
       "https://res.cloudinary.com/dilzshtrf/video/upload/v1753750817/Untitled_video_-_Made_with_Clipchamp_kvwmbi.mp4",
@@ -19,7 +30,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Cloudinary", "Vercel"],
   },
   {
-    id: 2,
+    id: 3,
     title: "CGPA Calculator",
     video:
       "https://res.cloudinary.com/dilzshtrf/video/upload/CGPA_Calculator_-_Onyekachi.dev_-_Google_Chrome_2025-08-11_22-15-52_ko1njc.mp4",
@@ -30,7 +41,29 @@ const projects = [
     techStack: ["TypeScript", "React", "Vercel"],
   },
   {
-    id: 3,
+    id: 4,
+    title: "TASKFLOW",
+    video:
+      "https://res.cloudinary.com/dilzshtrf/video/upload/Nerve_Systems_Network___E-Commerce_Transport_Solutions_-_Google_Chrome_2025-09-24_22-19-07_online-video-cutter.com_2_jztgol.mp4",
+    poster: "https://dropimg.onyekachi.dev/fecf0066n574v6qo7nxq",
+    description:
+      "TaskFlow is an intelligent task management app that uses custom rules to automatically prioritize your to-do list based on your unique workflow and preferences.",
+    link: "https://taskflowapp.onyekachi.dev/",
+    techStack: ["TypeScript", "React", "Vite", "Firebase Firestore", "Vercel"],
+  },
+  {
+    id: 5,
+    title: "Nursing Quiz App (UNICAL)",
+    video:
+      "https://res.cloudinary.com/dilzshtrf/video/upload/Nerve_Systems_Network___E-Commerce_Transport_Solutions_-_Google_Chrome_2025-09-24_22-19-07_online-video-cutter.com_1_gipvfl.mp4",
+    poster: "https://dropimg.onyekachi.dev/myvhfhezvsfqldph1gvc",
+    description:
+      "Secure quiz app for nursing students with randomized questions, verification, and real-time scoring.",
+    link: "https://quiz-app-ashen-eight-96.vercel.app/",
+    techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
+  },
+  {
+    id: 6,
     title: "Knowledge City",
     video: "/videos/kc.mp4",
     poster: "/videos/posters/kc.png",
@@ -40,7 +73,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Next.js", "Vercel", "Firebase"],
   },
   {
-    id: 4,
+    id: 7,
     title: "Nerves Website",
     video:
       "https://res.cloudinary.com/dilzshtrf/video/upload/Nerve_Systems_Network___E-Commerce_Transport_Solutions_-_Google_Chrome_2025-09-24_22-19-07_online-video-cutter.com_bewfhd.mp4",
@@ -58,18 +91,7 @@ const projects = [
     ],
   },
   {
-    id: 5,
-    title: "Nursing Quiz App (UNICAL)",
-    video:
-      "https://res.cloudinary.com/dilzshtrf/video/upload/Nerve_Systems_Network___E-Commerce_Transport_Solutions_-_Google_Chrome_2025-09-24_22-19-07_online-video-cutter.com_1_gipvfl.mp4",
-    poster: "https://dropimg.onyekachi.dev/myvhfhezvsfqldph1gvc",
-    description:
-      "Secure quiz app for nursing students with randomized questions, verification, and real-time scoring.",
-    link: "https://quiz-app-ashen-eight-96.vercel.app/",
-    techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
-  },
-  {
-    id: 6,
+    id: 8,
     title: "Goals Afrika",
     video: "/videos/goals-afrika.mp4",
     poster: "/videos/posters/goals-afrika.png",
@@ -85,7 +107,7 @@ const projects = [
     ],
   },
   {
-    id: 7,
+    id: 9,
     title: "Diocese Of Calabar",
     video: "/videos/dio-cal.mp4",
     poster: "/videos/posters/dio-cal.png",
@@ -95,7 +117,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
   {
-    id: 8,
+    id: 10,
     title: "D'roid Technologies Ltd",
     video: "/videos/droid.mp4",
     poster: "/videos/posters/droid.png",
@@ -105,7 +127,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
   {
-    id: 9,
+    id: 11,
     title: "AYF Calabar",
     video: "/videos/ayf-cal.mp4",
     poster: "/videos/posters/ayf-cal.png",
@@ -119,17 +141,6 @@ const projects = [
       "Firebase",
       "Google Sheets App Script",
     ],
-  },
-  {
-    id: 10,
-    title: "TASKFLOW",
-    video:
-      "https://res.cloudinary.com/dilzshtrf/video/upload/Nerve_Systems_Network___E-Commerce_Transport_Solutions_-_Google_Chrome_2025-09-24_22-19-07_online-video-cutter.com_2_jztgol.mp4",
-    poster: "https://dropimg.onyekachi.dev/fecf0066n574v6qo7nxq",
-    description:
-      "TaskFlow is an intelligent task management app that uses custom rules to automatically prioritize your to-do list based on your unique workflow and preferences.",
-    link: "https://taskflowapp.onyekachi.dev/",
-    techStack: ["TypeScript", "React", "Vite", "Firebase Firestore", "Vercel"],
   },
 ];
 
