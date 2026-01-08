@@ -14,8 +14,11 @@ const Intro: React.FC = () => {
           <div className="welcome-bg-text" aria-hidden="true">
             Onyekachi.dev
           </div>
-          <h1 className="intro-heading" data-text="Hi, I'm KachiDeGreat">
-            Hi, I'm KachiDeGreat
+          <h1
+            className="intro-heading"
+            data-text="Onyekachi, God'swill Richard"
+          >
+            Onyekachi, God'swill Richard
           </h1>
           <div className="intro-content">
             <p>
