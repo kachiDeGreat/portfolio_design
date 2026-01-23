@@ -21,7 +21,7 @@ const Intro: React.FC = () => {
             Onyekachi, God'swill Richard
           </h1>
           <div className="intro-content">
-            <p>
+            {/* <p>
               I’m a{" "}
               <span style={{ fontWeight: "bold" }}>frontend developer</span>, i
               build responsive, user-focused experiences. I craft websites that
@@ -31,6 +31,15 @@ const Intro: React.FC = () => {
               especially where <span style={{ fontWeight: "bold" }}>AI</span>{" "}
               meets creativity, and I constantly explore ways to bring
               intelligent systems into the user experience.
+            </p> */}
+            <p>
+              Hello! I'm <span style={{ fontWeight: "bold" }}>frontend developer</span> specializing in creating responsive, user-centric experiences. I
+              design websites that not only look great but also function
+              smoothly across all devices. Additionally, I have a strong passion
+              for the  <span style={{ fontWeight: "bold" }}>future of technology </span>,
+              particularly at the intersection of <span style={{ fontWeight: "bold" }}>AI</span> and creativity. I
+              continuously explore innovative ways to integrate intelligent
+              systems into user experience
             </p>
 
             <p>
