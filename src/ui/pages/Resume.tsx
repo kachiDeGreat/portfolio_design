@@ -12,7 +12,7 @@ const Resume: React.FC = () => {
     {
       title: "Front-End Developer",
       company: "Droid Technologies (Remote)",
-      period: "2024 — Present",
+      period: "2024 — 2025",
       responsibilities: [
         "Built and maintained scalable web applications using React.js, TypeScript, and Pure CSS, improving load times by 30%.",
         "Developed reusable component systems, cutting development time by 25% and improving consistency across projects.",
@@ -122,34 +122,37 @@ const Resume: React.FC = () => {
     "Cross-functional Teamwork",
   ];
 
-  const projects = [
-    {
-      name: "DropImg (React + Firebase + Tailwind CSS)",
-      description:
-        "Built a lightweight image hosting platform for anonymous uploads with auto-generated links. Improved image load times by 40% through optimized Firebase Storage queries.",
-    },
-    {
-      name: "Knowledge City (React + Firebase + Paystack)",
-      description:
-        "Developed an e-learning web app featuring coin-based payments, course modules, and Firestore integration for real-time updates.",
-    },
-    {
-      name: "AYF Calabar Web Portal (HTML + Firebase)",
-      description:
-        "Created a multi-step registration form and blog system, boosting member engagement by 3× through responsive design and real-time data handling.",
-    },
-  ];
+  // const projects = [
+  //   {
+  //     name: "DropImg (React + Firebase + Tailwind CSS)",
+  //     description:
+  //       "Built a lightweight image hosting platform for anonymous uploads with auto-generated links. Improved image load times by 40% through optimized Firebase Storage queries.",
+  //   },
+  //   {
+  //     name: "Knowledge City (React + Firebase + Paystack)",
+  //     description:
+  //       "Developed an e-learning web app featuring coin-based payments, course modules, and Firestore integration for real-time updates.",
+  //   },
+  //   {
+  //     name: "AYF Calabar Web Portal (HTML + Firebase)",
+  //     description:
+  //       "Created a multi-step registration form and blog system, boosting member engagement by 3× through responsive design and real-time data handling.",
+  //   },
+  // ];
 
   return (
     <MotionDiv>
       <div className="main-content">
         <div className={`resume-content ${theme}`}>
           <h1 className="resume-heading">Resume</h1>
-          <p className="resume-subtitle">
-            <a className="resume-link" href="">
+          {/* <p className="resume-subtitle">
+            <a
+              className="resume-link"
+              href="./Onyekachi_Godswill_Richard_Frontend_Developer_CV.pdf"
+            >
               View
             </a>{" "}
-            or{" "}
+            or
             <a
               className="resume-link"
               rel="noopener noreferrer"
@@ -162,7 +165,7 @@ const Resume: React.FC = () => {
           </p>
           <div className="welcome-bg-text" aria-hidden="true">
             Resume.
-          </div>
+          </div> */}
 
           {/* Resume Content */}
           <div className="resume-container">

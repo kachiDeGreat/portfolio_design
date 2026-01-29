@@ -14,12 +14,9 @@ const SocialLinks: React.FC = () => {
   const Linkedin = TiSocialLinkedin as React.ComponentType<
     React.SVGProps<SVGSVGElement>
   >;
-  const Msteams = BsMicrosoftTeams as React.ComponentType<
+  const Whatsapp = IoLogoWhatsapp as React.ComponentType<
     React.SVGProps<SVGSVGElement>
   >;
-    const Whatsapp = IoLogoWhatsapp as React.ComponentType<
-      React.SVGProps<SVGSVGElement>
-    >;
   const openLink = (url: string) => {
     window.open(url, "_blank");
   };
@@ -35,9 +32,6 @@ const SocialLinks: React.FC = () => {
       >
         <Linkedin />
       </button>
-      {/* <button onClick={() => openLink("https://github.com/kachiDeGreat")}>
-        <Msteams />
-      </button> */}
       <button onClick={() => openLink("https://wa.link/wz85hk")}>
         <Whatsapp />
       </button>
