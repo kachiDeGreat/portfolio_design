@@ -1,7 +1,6 @@
 import React from "react";
 import { IoLogoGithub } from "react-icons/io5";
 import { TiSocialLinkedin } from "react-icons/ti";
-import { BsMicrosoftTeams } from "react-icons/bs";
 import { IoLogoWhatsapp } from "react-icons/io5";
 import "./SocialLinks.css";
 import { useTheme } from "../theme/ThemeContext";
