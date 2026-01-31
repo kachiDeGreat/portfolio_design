@@ -22,7 +22,7 @@ const Intro: React.FC = () => {
           </h1>
           <div className="intro-content">
             <p>
-              Hello! I'm <span style={{ fontWeight: "bold" }}>frontend developer</span> specializing in creating responsive, user-centric experiences. I
+              Hello! I'm a <span style={{ fontWeight: "bold" }}>frontend developer</span> specializing in creating responsive, user-centric experiences. I
               design websites that not only look great but also function
               smoothly across all devices. Additionally, I have a strong passion
               for the  <span style={{ fontWeight: "bold" }}>future of technology </span>,
