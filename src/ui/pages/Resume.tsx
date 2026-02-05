@@ -4,11 +4,47 @@ import { useTheme } from "../components/theme/ThemeContext";
 import "./Resume.css";
 import { Link } from "react-router-dom";
 import SocialLinks from "../components/socialLinks/SocialLinks";
+// import SocialLinks from "../components/socialLinks/SocialLinks";
+// import { title } from "process";
 
 const Resume: React.FC = () => {
   const { theme } = useTheme();
 
   const experiences = [
+    {
+      title: "HEAD OF FRONTEND & MOBILE",
+      company: "Ransact Technologies (Remote)",
+      period: "2025 — 2026",
+      responsibilities: [
+        "Architected and deployed a production-ready mobile and web experience from scratch within 6 months, serving as the technical lead for the frontend stack.",
+        "Reduced application bundle size by 40% through modular architecture and tree-shaking, ensuring sub-2 second load times on 3G networks.",
+        "Engineered a proprietary library of 30+ reusable UI components, maintaining 100% visual consistency and reducing feature development time by 25%.",
+        "Integrated secure, real-time FX transaction flows and payment gateways, maintaining 99.9% system uptime since launch.",
+        "Collaborated with backend engineers to define API schemas for Node.js services, optimizing data transfer efficiency for cross-border payments.",
+      ],
+    },
+    {
+      title: "FRONTEND DEVELOPER",
+      company: "Knowledge City (Fintech/EdTech)",
+      period: "2025 — 2026",
+      responsibilities: [
+        "Built a core e-learning engine with complex 'Backpack' and course management features using Next.js, serving an active student base",
+        "Developed a gamified 'Coin System' for reward management, processing real-time student transactions with 100% data integrity.",
+        "Utilized Firestore for real-time data synchronization, providing immediate feedback for quizzes and learning diary updates.",
+        "Partnered with product teams to refine UI/UX, achieving a measurable reduction in friction during the user onboarding process.",
+      ],
+    },
+    {
+      title: "Lead Developer",
+      company: "Nigerian Nursing Success (Project-Based)",
+      period: "2024 — 2026",
+      responsibilities: [
+        "Designed and launched an EdTech assessment platform used by 1,000+ nursing students to prepare for professional examinations.",
+        "Engineered a rigorous automated scoring engine with randomized question banks, reducing manual grading efforts by 100%.",
+        "Developed internal administrative dashboards to manage secure exam audit logs and track individual student performance analytics.",
+        "Managed the full project lifecycle from requirement gathering to deployment on Vercel and Firebase.",
+      ],
+    },
     {
       title: "Front-End Developer",
       company: "Droid Technologies (Remote)",
@@ -64,21 +100,32 @@ const Resume: React.FC = () => {
   ];
 
   const technicalSkills = {
-    Languages: ["JavaScript (ES6+)", "TypeScript", "HTML5", "CSS3", "SCSS"],
-    "Frameworks & Libraries": [
+    Languages: [
+      "JavaScript (ES6+)",
+      "TypeScript",
+      "Node.js (NestJS/Express)",
+      "PHP",
+      "HTML5",
+      "CSS3/SCSS",
+    ],
+    "Frontend & Mobile": [
       "React.js",
+      "React Native",
       "Next.js",
+      "Vite",
       "Tailwind CSS",
       "Bootstrap",
-      "jQuery",
+      "Material UI (MUI)",
     ],
-    "Backend & APIs": [
-      "Firebase",
-      "Node.js",
-      "Express.js",
-      "REST APIs",
-      "GraphQL",
+
+    "Backend & Cloud": [
+      "Firebase (Firestore, Auth, Functions)",
+      "RESTful APIs",
+      "API Schema Design",
+      "Azure DevOps",
+      "PostgreSQL",
     ],
+
     "Tools & Platforms": [
       "Git",
       "GitHub",
@@ -87,11 +134,14 @@ const Resume: React.FC = () => {
       "Webpack",
       "Render",
     ],
-    "Testing & Optimization": [
-      "Chrome DevTools",
-      "Lighthouse",
-      "Jest",
-      "SEO Optimization",
+    "Tools & Engineering": [
+      "Git",
+      "GitHub",
+      "CI/CD Pipelines",
+      "Figma",
+      "Unit/E2E Testing (Jest)",
+      "Component-Driven Design",
+      "Performance Optimization",
     ],
     "Design & Workflow": [
       "Figma",
@@ -109,18 +159,18 @@ const Resume: React.FC = () => {
     ],
   };
 
-  const softSkills = [
-    "Problem-solving",
-    "UI/UX Design",
-    "Collaboration",
-    "Clean Code",
-    "Accessibility",
-    "Performance",
-    "Scalability",
-    "Agile Development",
-    "SEO Optimization",
-    "Cross-functional Teamwork",
-  ];
+  // const softSkills = [
+  //   "Problem-solving",
+  //   "UI/UX Design",
+  //   "Collaboration",
+  //   "Clean Code",
+  //   "Accessibility",
+  //   "Performance",
+  //   "Scalability",
+  //   "Agile Development",
+  //   "SEO Optimization",
+  //   "Cross-functional Teamwork",
+  // ];
 
   // const projects = [
   //   {
@@ -171,10 +221,9 @@ const Resume: React.FC = () => {
           <div className="resume-container">
             {/* Header */}
             <header className="resume-header">
-              <h1 className="resume-name">ONYEKACHI, GOD'SWILL RICHARD</h1>
+              <h1 className="resume-name">ONYEKACHI GOD'SWILL RICHARD</h1>
               <h2 className="resume-title">
-                Front-End Developer | React.js | TypeScript | Modern Web
-                Experiences
+                Senior Frontend Engineer | React, TypeScript & Design Systems
               </h2>
               <div className="resume-contact">
                 <div className="contact-item">
@@ -189,7 +238,7 @@ const Resume: React.FC = () => {
                     <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
                     <circle cx="12" cy="10" r="3" />
                   </svg>
-                  Calabar, Nigeria
+                  Abuja, Nigeria
                 </div>
                 <div className="contact-item">
                   <svg
@@ -257,6 +306,27 @@ const Resume: React.FC = () => {
                     GitHub
                   </a>
                 </div>
+                <div className="contact-item">
+                  <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  >
+                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                    <rect x="2" y="9" width="4" height="12" />
+                    <circle cx="4" cy="4" r="2" />
+                  </svg>
+                  <a
+                    href="https://www.linkedin.com/in/richard-godswill"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    LinkedIn
+                  </a>
+                </div>
               </div>
             </header>
 
@@ -264,14 +334,15 @@ const Resume: React.FC = () => {
             <section className="resume-section">
               <h3 className="section-title">Professional Summary</h3>
               <p className="about-text">
-                Versatile Front-End Developer with over 5 years of experience
-                creating responsive, accessible, and performance-driven web
-                applications. Skilled in React.js, TypeScript, JavaScript, and
-                Tailwind CSS, with a strong eye for UI/UX design and
-                scalability. Adept at building everything from fast
-                institutional websites to dynamic, data-driven web apps.
-                Passionate about clean code, problem-solving, and delivering
-                seamless digital experiences for businesses and users alike.
+                Senior Software Engineer with over 5 years of experience
+                delivering high-performance web and mobile architectures using
+                React, React Native, and Node.js. Specialized in the end-to-end
+                development of FinTech and EdTech platforms, from initial
+                architectural design to API schema definition and CI/CD
+                deployment. Expertise in building lightweight, data efficient
+                systems for international markets, evidenced by leading
+                technical delivery for Ransact and the Nigerian Nursing Success
+                platform.
               </p>
             </section>
 
@@ -352,18 +423,6 @@ const Resume: React.FC = () => {
                       ))}
                     </div>
                   </div>
-                ))}
-              </div>
-            </section>
-
-            {/* Soft Skills */}
-            <section className="resume-section">
-              <h3 className="section-title">Soft Skills</h3>
-              <div className="soft-skills">
-                {softSkills.map((skill) => (
-                  <span key={skill} className="soft-skill-tag">
-                    {skill}
-                  </span>
                 ))}
               </div>
             </section>
