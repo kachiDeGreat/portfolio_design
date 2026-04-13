@@ -9,6 +9,16 @@ import SocialLinks from "../components/socialLinks/SocialLinks";
 const projects = [
   {
     id: 1,
+    title: "Ransact App (Coming Soon)",
+    video: "/videos/ransact.mp4",
+    poster: "https://dropimg.onyekachi.dev/tqjujzf8rz0gnuhu5wtk",
+    description:
+      "Ransact was built on a simple belief: crypto payments should be as seamless as cash, without complexity, volatility risk, or settlement delays. We are building the infrastructure that allows consumers to pay with crypto while merchants receive instant fiat settlement.",
+    link: "",
+    techStack: ["JavaScript", "React Native", "Animate.css", "Python"],
+  },
+  {
+    id: 2,
     title: "Nigerian Nursing Success",
     video:
       "https://res.cloudinary.com/dilzshtrf/video/upload/v1760471334/Nigerian_Nursing_Success_-_Pass_Your_Nursing_Council_Exams_with_Confidence_-_Google_Chrome_2025-10-14_20-42-06_online-video-cutter.com_hy14wi.mp4",
@@ -19,7 +29,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Vite", "Firebase Firestore", "Vercel"],
   },
   {
-    id: 2,
+    id: 3,
     title: "Drop Img",
     video:
       "https://res.cloudinary.com/dilzshtrf/video/upload/v1753750817/Untitled_video_-_Made_with_Clipchamp_kvwmbi.mp4",
@@ -30,7 +40,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Cloudinary", "Vercel"],
   },
   {
-    id: 3,
+    id: 4,
     title: "CGPA Calculator",
     video:
       "https://res.cloudinary.com/dilzshtrf/video/upload/CGPA_Calculator_-_Onyekachi.dev_-_Google_Chrome_2025-08-11_22-15-52_ko1njc.mp4",
@@ -41,7 +51,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Vercel"],
   },
   {
-    id: 4,
+    id: 5,
     title: "TASKFLOW",
     video:
       "https://res.cloudinary.com/dilzshtrf/video/upload/Nerve_Systems_Network___E-Commerce_Transport_Solutions_-_Google_Chrome_2025-09-24_22-19-07_online-video-cutter.com_2_jztgol.mp4",
@@ -52,18 +62,18 @@ const projects = [
     techStack: ["TypeScript", "React", "Vite", "Firebase Firestore", "Vercel"],
   },
   {
-    id: 5,
+    id: 6,
     title: "Nursing Quiz App (UNICAL)",
     video:
       "https://res.cloudinary.com/dilzshtrf/video/upload/Nerve_Systems_Network___E-Commerce_Transport_Solutions_-_Google_Chrome_2025-09-24_22-19-07_online-video-cutter.com_1_gipvfl.mp4",
     poster: "https://dropimg.onyekachi.dev/myvhfhezvsfqldph1gvc",
     description:
       "Secure quiz app for nursing students with randomized questions, verification, and real-time scoring.",
-    link: "https://quiz-app-ashen-eight-96.vercel.app/",
+    link: "https://quiz-app-test-chi.vercel.app/",
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
   {
-    id: 6,
+    id: 7,
     title: "Knowledge City",
     video: "/videos/kc.mp4",
     poster: "/videos/posters/kc.png",
@@ -73,7 +83,7 @@ const projects = [
     techStack: ["TypeScript", "React", "Next.js", "Vercel", "Firebase"],
   },
   {
-    id: 7,
+    id: 8,
     title: "Nerves Website",
     video:
       "https://res.cloudinary.com/dilzshtrf/video/upload/Nerve_Systems_Network___E-Commerce_Transport_Solutions_-_Google_Chrome_2025-09-24_22-19-07_online-video-cutter.com_bewfhd.mp4",
@@ -91,7 +101,7 @@ const projects = [
     ],
   },
   {
-    id: 8,
+    id: 9,
     title: "Goals Afrika",
     video: "/videos/goals-afrika.mp4",
     poster: "/videos/posters/goals-afrika.png",
@@ -107,17 +117,17 @@ const projects = [
     ],
   },
   {
-    id: 9,
+    id: 10,
     title: "Diocese Of Calabar",
     video: "/videos/dio-cal.mp4",
     poster: "/videos/posters/dio-cal.png",
     description:
       "Official website of the Diocese of Calabar, Church of Nigeria (Anglican Communion), featuring events, news, and resources.",
-    link: "https://diocese-of-calabar-website.vercel.app/",
+    link: "http://anglicandioceseofcalabar.org/",
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
   {
-    id: 10,
+    id: 11,
     title: "D'roid Technologies Ltd",
     video: "/videos/droid.mp4",
     poster: "/videos/posters/droid.png",
@@ -127,13 +137,13 @@ const projects = [
     techStack: ["TypeScript", "React", "Vercel", "Firebase", "Express"],
   },
   {
-    id: 11,
+    id: 12,
     title: "AYF Calabar",
     video: "/videos/ayf-cal.mp4",
     poster: "/videos/posters/ayf-cal.png",
     description:
       "Official AYF Calabar website with conference registration, member management, and dynamic content updates.",
-    link: "https://ayfcalabar.org.ng/",
+    link: "https://ayfcalabar-website.web.app/",
     techStack: [
       "JavaScript",
       "Bootstrap CSS",
@@ -142,33 +152,37 @@ const projects = [
       "Google Sheets App Script",
     ],
   },
+  {
+    id: 13,
+    title: "D'roid one dashboard (Organization Acct)",
+    video: "/videos/droid-one.mp4",
+    poster: "/videos/posters/droid-one.png",
+    description: "D'roid One dashboard",
+    link: "https://www.droidtechhq.com/auth/organization-login",
+    techStack: ["JavaScript", "React", "Animate.css", "Firebase"],
+  },
 ];
 
 const Projects: React.FC = () => {
   const { theme } = useTheme();
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
-  const hasStarted = useRef<boolean[]>([]);
   const [videoLoaded, setVideoLoaded] = useState<boolean[]>([]);
   const [posterLoaded, setPosterLoaded] = useState<boolean[]>([]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
-        entries.forEach((entry, index) => {
-          const video = videoRefs.current[index];
-          if (!video || hasStarted.current[index]) return;
+        entries.forEach((entry) => {
+          const video = entry.target as HTMLVideoElement;
 
           if (entry.isIntersecting) {
-            setTimeout(() => {
-              video.play().catch((e) => console.log("Autoplay prevented:", e));
-              hasStarted.current[index] = true;
-            }, index * 2000);
+            video.play().catch((e) => console.log("Autoplay prevented:", e));
           } else {
             video.pause();
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     videoRefs.current.forEach((video) => {
@@ -184,7 +198,6 @@ const Projects: React.FC = () => {
 
   useEffect(() => {
     videoRefs.current = videoRefs.current.slice(0, projects.length);
-    hasStarted.current = new Array(projects.length).fill(false);
     setVideoLoaded(new Array(projects.length).fill(false));
     setPosterLoaded(new Array(projects.length).fill(false));
   }, []);
@@ -236,6 +249,7 @@ const Projects: React.FC = () => {
                       if (el) videoRefs.current[index] = el;
                     }}
                     src={project.video}
+                    autoPlay
                     loop
                     muted
                     playsInline
