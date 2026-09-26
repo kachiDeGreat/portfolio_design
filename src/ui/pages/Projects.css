@@ -430,3 +430,22 @@
   object-fit: cover;
   border-radius: 8px;
 }
+
+/* Projects Disclaimer */
+.projects-disclaimer {
+  margin-top: 3rem;
+  padding: 1.5rem;
+  font-size: 0.9rem;
+  font-style: italic;
+  text-align: center;
+  opacity: 0.7;
+  border-top: 1px solid rgba(192, 192, 192, 0.2);
+}
+
+.project-content.light .projects-disclaimer {
+  color: #4a5568;
+}
+
+.project-content.dark .projects-disclaimer {
+  color: #e2e8f0;
+}

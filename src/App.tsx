@@ -20,6 +20,7 @@ import Navbar from "./ui/components/navbar/Navbar";
 import ScrollToTop from "./ui/components/scrollToTop/ScrollToTop";
 import LoadingScreen from "./ui/components/loadingScreen/LoadingScreen";
 import Resume from "./ui/pages/Resume";
+import TopLineLoader from "./ui/components/topLineLoader/TopLineLoader";
 
 function AppContent() {
   const location = useLocation();
@@ -37,6 +38,7 @@ function AppContent() {
   return (
     <div className="app-container">
       <LoadingScreen isLoading={isInitialLoad} isInitialLoad={isInitialLoad} />
+      <TopLineLoader />
       <TechBackground />
       <Navbar />
       <MouseMove />

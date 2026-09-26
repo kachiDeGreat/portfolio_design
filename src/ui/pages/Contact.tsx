@@ -1,44 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
 import { useTheme } from "../components/theme/ThemeContext";
 import "./Contact.css";
 import { MotionDiv } from "../components/animations/pageTransitions";
-import emailjs from "emailjs-com";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Link } from "react-router-dom";
 import SocialLinks from "../components/socialLinks/SocialLinks";
 
-const SERVICE_ID = "service_1yu2r8q";
-const TEMPLATE_ID = "template_xduy5jc";
-const PUBLIC_KEY = "g6Eg11iIMomLSZjZ2";
+const WHATSAPP_NUMBER = "2348100790074";
 
 const Contact: React.FC = () => {
   const { theme } = useTheme();
-  const [isSending, setIsSending] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setIsSending(true);
     const form = e.currentTarget;
 
-    const fullName = `${
-      (form.elements.namedItem("firstName") as HTMLInputElement).value
-    } ${(form.elements.namedItem("lastName") as HTMLInputElement).value}`;
-    const currentTime = new Date().toLocaleString();
+    const firstName = (form.elements.namedItem("firstName") as HTMLInputElement)
+      .value;
+    const lastName = (form.elements.namedItem("lastName") as HTMLInputElement)
+      .value;
+    const email = (form.elements.namedItem("email") as HTMLInputElement).value;
+    const subject = (form.elements.namedItem("subject") as HTMLInputElement)
+      .value;
+    const message = (form.elements.namedItem("message") as HTMLTextAreaElement)
+      .value;
 
-    (form.elements.namedItem("name") as HTMLInputElement).value = fullName;
-    (form.elements.namedItem("time") as HTMLInputElement).value = currentTime;
+    const text = `Hello! I am ${firstName} ${lastName}.\nEmail: ${email}\n\nSubject: ${subject}\n\nMessage:\n${message}`;
+    const whatsappUrl = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(text)}`;
 
-    try {
-      await emailjs.sendForm(SERVICE_ID, TEMPLATE_ID, form, PUBLIC_KEY);
-      toast.success("Message sent successfully!");
-      form.reset();
-    } catch (error) {
-      toast.error("Failed to send message. Please try again.");
-      console.error("EmailJS error:", error);
-    } finally {
-      setIsSending(false);
+    if (!WHATSAPP_NUMBER) {
+      toast.error("WhatsApp number is not configured yet.");
+      return;
     }
+
+    window.open(whatsappUrl, "_blank");
+    toast.success("Redirecting to WhatsApp...");
+    form.reset();
   };
 
   return (
@@ -108,16 +105,8 @@ const Contact: React.FC = () => {
                 />
               </div>
 
-              {/* Hidden fields for full name and time */}
-              <input type="hidden" name="name" />
-              <input type="hidden" name="time" />
-
-              <button
-                type="submit"
-                className="submit-button"
-                disabled={isSending}
-              >
-                {isSending ? "Sending..." : "Send Message"}
+              <button type="submit" className="submit-button">
+                Send Message
               </button>
             </form>
           </div>
